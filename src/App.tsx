@@ -1,11 +1,30 @@
 import { twMerge } from "tailwind-merge";
 import ThemeToggle from "./theme-toggle";
 
-// TODO: add github / linkedin / discord / email / resume links
 export default function App() {
   return (
     <div className="flex justify-center">
-      <main className="flex w-full max-w-3xl flex-col gap-10 px-6 py-14">
+      <main className="relative flex w-full max-w-3xl flex-col gap-10 px-6 py-14">
+        <ul className="absolute right-0 top-[8.7%] flex flex-col gap-1 px-6">
+          <li>
+            <NewTabLink href="https://github.com/arkatsy" className="text-blue-400 underline underline-offset-2 visited:text-purple-400">
+              Github
+            </NewTabLink>
+          </li>
+          <li>
+            <NewTabLink
+              href="https://linkedin.com/in/arkatsy"
+              className="text-blue-400 underline underline-offset-2 visited:text-purple-400"
+            >
+              LinkedIn
+            </NewTabLink>
+          </li>
+          <li>
+            <NewTabLink href="/resume.pdf" className="text-blue-400 underline underline-offset-2 visited:text-purple-400">
+              Resume
+            </NewTabLink>
+          </li>
+        </ul>
         <header className="flex items-center justify-between">
           <div>
             <h3 className="text-2xl font-semibold tracking-wider">arkatsy</h3>
