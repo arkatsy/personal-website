@@ -15,7 +15,7 @@ export default function App() {
         <div className="text-lg">
           <p>Hey, I'm Argyris, a CS undergrad from Greece.</p>
           <br />
-          <p>I like to mess and hack around things with Javascript whether it's on the web, frontend, backend or tooling.</p>
+          <p>I enjoy hacking and crafting things using javascript.</p>
           <br />
           <p>Here are some of my projects:</p>
           <br />
