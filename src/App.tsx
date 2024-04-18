@@ -3,36 +3,17 @@ import ThemeToggle from "./theme-toggle";
 
 export default function App() {
   return (
-    <div className="flex justify-center">
+    <div className="flex min-w-[390px] justify-center">
       <main className="relative flex w-full max-w-3xl flex-col gap-10 px-6 py-14">
-        <ul className="absolute right-0 top-[8.7%] flex flex-col gap-1 px-6">
-          <li>
-            <NewTabLink href="https://github.com/arkatsy" className="text-blue-400 underline underline-offset-2 visited:text-purple-400">
-              Github
-            </NewTabLink>
-          </li>
-          <li>
-            <NewTabLink
-              href="https://linkedin.com/in/arkatsy"
-              className="text-blue-400 underline underline-offset-2 visited:text-purple-400"
-            >
-              LinkedIn
-            </NewTabLink>
-          </li>
-          <li>
-            <NewTabLink href="/resume.pdf" className="text-blue-400 underline underline-offset-2 visited:text-purple-400">
-              Resume
-            </NewTabLink>
-          </li>
-        </ul>
+        <SocialLinks />
         <header className="flex items-center justify-between">
           <div>
             <h3 className="text-2xl font-semibold tracking-wider">arkatsy</h3>
           </div>
           <ThemeToggle />
         </header>
-        <div className="text-lg">
-          <p>Hey, I'm Argyris, a CS undergrad from Greece.</p>
+        <div className="mr-20 text-lg">
+          <p>Hey, I'm Argyris, a CS undergraduate and self-taught developer from Greece.</p>
           <br />
           <p>I enjoy hacking and crafting things using javascript.</p>
           <br />
@@ -122,6 +103,37 @@ export default function App() {
   );
 }
 
+function SocialLinks() {
+  return (
+    <ul className="absolute right-0 top-[8.7%] flex-col gap-1 px-6 md:flex">
+      <li>
+        <NewTabLink
+          href="https://github.com/arkatsy"
+          className="text-blue-500 underline underline-offset-2 visited:text-purple-400 dark:text-blue-400 dark:visited:text-purple-400"
+        >
+          Github
+        </NewTabLink>
+      </li>
+      <li>
+        <NewTabLink
+          href="https://linkedin.com/in/arkatsy"
+          className="text-blue-500 underline underline-offset-2 visited:text-purple-400 dark:text-blue-400 dark:visited:text-purple-400"
+        >
+          LinkedIn
+        </NewTabLink>
+      </li>
+      <li>
+        <NewTabLink
+          href="/resume.pdf"
+          className="text-blue-500 underline underline-offset-2 visited:text-purple-400 dark:text-blue-400 dark:visited:text-purple-400"
+        >
+          Resume
+        </NewTabLink>
+      </li>
+    </ul>
+  );
+}
+
 function ProjectSection({ title, children }: { title: string; children: React.ReactNode }) {
   const lowercaseTitle = title.toLowerCase();
   return (
@@ -160,7 +172,7 @@ ProjectListItem.Links = function ({ repo, live }: { repo: string; live?: string 
           live:&nbsp;
           <NewTabLink
             href={live}
-            className="underline underline-offset-2 opacity-65 transition-opacity duration-200 hover:opacity-85 motion-reduce:duration-0"
+            className="underline underline-offset-2 opacity-85 transition-opacity duration-200 hover:opacity-95 motion-reduce:duration-0 dark:opacity-65 dark:hover:opacity-85"
           >
             {live}
           </NewTabLink>
@@ -170,7 +182,7 @@ ProjectListItem.Links = function ({ repo, live }: { repo: string; live?: string 
         repo:&nbsp;
         <NewTabLink
           href={repo}
-          className="underline underline-offset-2 opacity-65 transition-opacity duration-200 hover:opacity-85 motion-reduce:duration-0"
+          className="underline underline-offset-2 opacity-85 transition-opacity duration-200 hover:opacity-95 motion-reduce:duration-0 dark:opacity-65 dark:hover:opacity-85"
         >
           {repo}
         </NewTabLink>
