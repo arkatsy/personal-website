@@ -1,0 +1,28 @@
+@import "./fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(60, 7%, 6%);
+  --foreground: hsl(60, 100%, 95%);
+}
+
+.light {
+  --background: hsl(60, 100%, 95%);
+  --foreground: hsl(60, 7%, 6%);
+}
+
+@layer base {
+  body {
+    background-color: theme(colors.background);
+    color: theme(colors.foreground);
+    font-family: "Satoshi-Variable", system-ui;
+  }
+
+  ::selection {
+    background-color: theme(colors.foreground);
+    color: theme(colors.background);
+  }
+}
