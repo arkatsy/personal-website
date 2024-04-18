@@ -1,10 +1,11 @@
 import { twMerge } from "tailwind-merge";
 import ThemeToggle from "./theme-toggle";
 
+// TODO: add github / linkedin / discord / email / resume links
 export default function App() {
   return (
     <div className="flex justify-center">
-      <main className="flex w-full max-w-3xl flex-col gap-10 py-14">
+      <main className="flex w-full max-w-3xl flex-col gap-10 px-6 py-14">
         <header className="flex items-center justify-between">
           <div>
             <h3 className="text-2xl font-semibold tracking-wider">arkatsy</h3>
@@ -19,7 +20,7 @@ export default function App() {
           <p>Here are some of my projects:</p>
           <br />
           <nav>
-            <ul className="-mt-4 flex gap-6 text-base">
+            <ul className="-mt-4 flex flex-wrap gap-2 text-base md:gap-6 ">
               <li className="group">
                 <HashTagLink hash="frontend">frontend</HashTagLink>
               </li>
@@ -106,7 +107,7 @@ function ProjectSection({ title, children }: { title: string; children: React.Re
   const lowercaseTitle = title.toLowerCase();
   return (
     <section id={lowercaseTitle} className="flex flex-col gap-4">
-      <a href={`#${lowercaseTitle}`} className="group relative flex w-fit items-center font-medium underline underline-offset-2">
+      <a href={`#${lowercaseTitle}`} className="group relative flex w-fit items-center font-medium underline-offset-2 hover:underline">
         <HashTagIcon className="absolute -left-4 opacity-0 transition-opacity group-hover:opacity-100 motion-reduce:duration-0" />
         {title}
       </a>

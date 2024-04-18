@@ -7,5 +7,5 @@ export default function ThemeToggle() {
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  return <Expand toggled={isDark} onToggle={toggle} duration={300} className="p-1 text-3xl" />;
+  return <Expand toggled={isDark} onToggle={toggle} duration={200} className="p-1 text-3xl" />;
 }
