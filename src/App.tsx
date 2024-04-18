@@ -12,7 +12,7 @@ export default function App() {
           <ThemeToggle />
         </header>
         <div className="text-lg">
-          <p>Hey, I'm Argyris, a developer from Greece.</p>
+          <p>Hey, I'm Argyris, a CS undergrad from Greece.</p>
           <br />
           <p>I like to mess and hack around things with Javascript whether it's on the web, frontend, backend or tooling.</p>
           <br />
