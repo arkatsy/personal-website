@@ -13,7 +13,7 @@ export default function App() {
           <ThemeToggle />
         </header>
         <div className="mr-20 text-lg">
-          <p>Hey, I'm Argyris, a CS undergraduate and self-taught developer from Greece.</p>
+          <p>Hey, I'm Argyris, a CS student and self-taught developer from Greece.</p>
           <br />
           <p>I enjoy hacking and crafting things using javascript.</p>
           <br />
