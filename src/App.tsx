@@ -122,14 +122,14 @@ function SocialLinks() {
           LinkedIn
         </NewTabLink>
       </li>
-      {/* <li>
+      <li>
         <NewTabLink
           href="/resume.pdf"
           className="text-blue-500 underline underline-offset-2 visited:text-purple-400 dark:text-blue-400 dark:visited:text-purple-400"
         >
           Resume
         </NewTabLink>
-      </li> */}
+      </li>
     </ul>
   );
 }
